@@ -33,8 +33,8 @@ public class ScoutEventCrawlerTask : ScheduleTask<ScoutEventCrawlerTaskConfig>
 	{
 		var message = new JandiMessage
 		{
-			Body = "New ScoutLink events",
-			ConnectColor = "#99002b",
+			Body = "New ScoutEvent listings",
+			ConnectColor = "#84BC48",
 		};
 
 		foreach (var region in regions)
@@ -68,7 +68,7 @@ public class ScoutEventCrawlerTask : ScheduleTask<ScoutEventCrawlerTaskConfig>
 		{
 			message.ConnectInfo.Add(new JandiConnect
 			{
-				Description = "No new events near Sydney"
+				Description = "No new events posted for any subscribed regions"
 			});
 		}
 
